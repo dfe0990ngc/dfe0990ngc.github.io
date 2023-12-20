@@ -1,7 +1,36 @@
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
 
 // Override boostrap here
+$primary-color: #003c71;
+$secondary-color: #27669d;
+$theme-colors: map-merge($theme-colors, (
+  "primary": $primary-color,
+  "secondary": $secondary-color
+));
+
+$positions: (
+    "border-top": top, 
+    "border-end": right, 
+    "border-bottom": bottom, 
+    "border-start": left
+);
+@each $breakpoint,$value in $grid-breakpoints{
+    .border-#{$breakpoint}-0{
+        border: 0px !important;
+    }
+
+    @each $key, $val in $positions{
+        .#{$key}-#{$breakpoint}-0{
+            border: 0px !important;
+        }
+        @each $k, $v in $border-widths{
+            .#{$key}-#{$breakpoint}-#{$k}{
+                border-#{$val}: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color) !important;
+            }
+        }
+    }
+}
 
 // End override
 
