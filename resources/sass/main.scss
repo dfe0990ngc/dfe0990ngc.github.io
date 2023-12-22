@@ -77,11 +77,12 @@ $animation-delays: (
 );
 @each $key, $val in $animation-delays{
     .ad-#{$key}{
-        animation-duration: $val;
+        animation-delay: $val;
     }
 }
   
 .active {
     opacity: 4;
     transform: translateY(0);
+    animation-delay: 1s;
 }
