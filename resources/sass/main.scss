@@ -43,12 +43,8 @@ $positions: (
 // ====================================
 // Customized css here
 
-body,.header-paragraph{
+.par-100{
     font-weight: 100;
-}
-
-em,.card>p{
-    font-weight: 400;
 }
 
 .lh-5{
@@ -56,6 +52,6 @@ em,.card>p{
 }
 
 .card:hover{
-    transform: scale(1.05);
+    transform: scale(1.01);
     transition: 0.2s all ease-in-out;
 }
