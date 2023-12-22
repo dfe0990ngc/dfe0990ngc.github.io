@@ -55,3 +55,33 @@ $positions: (
     transform: scale(1.01);
     transition: 0.2s all ease-in-out;
 }
+
+// Animation
+.fade-in {
+    opacity: 0;
+    transform: translateY(10%);
+    transition: all 1s ease-out;
+}
+
+$animation-delays: (
+    1: 1s,
+    2: 1.5s,
+    3: 2s,
+    4: 2.5s,
+    5: 3s,
+    6: 3.5s,
+    7: 4s,
+    8: 4.5s,
+    9: 5s,
+    10: 5.5s
+);
+@each $key, $val in $animation-delays{
+    .ad-#{$key}{
+        animation-duration: $val;
+    }
+}
+  
+.active {
+opacity: 4;
+transform: translateY(0);
+}
