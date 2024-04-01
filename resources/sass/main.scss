@@ -60,7 +60,7 @@ $positions: (
 .fade-in {
     opacity: 0;
     transform: translateY(10%);
-    transition: all 1s ease-out;
+    transition: all 0.5s ease-in-out;
 }
 
 $animation-delays: (
